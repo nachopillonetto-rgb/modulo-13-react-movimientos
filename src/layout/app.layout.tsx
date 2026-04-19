@@ -1,3 +1,4 @@
+
 import { Link, Outlet } from "react-router-dom";
 
 export const AppLayout = () => {
@@ -11,6 +12,7 @@ export const AppLayout = () => {
       <nav style={{ background: "#1f2d55", padding: "16px 32px", display: "flex", gap: "24px" }}>
         <Link to="/" style={{ color: "white", textDecoration: "none" }}>Mis Cuentas</Link>
         <Link to="/movements/1" style={{ color: "#35d7ff", textDecoration: "none" }}>Movimientos</Link>
+        <Link to="/account-add">Agregar cuenta</Link>
         <span style={{ color: "white" }}>Transferencias</span>
       </nav>
 

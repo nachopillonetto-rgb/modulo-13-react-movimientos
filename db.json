@@ -6,6 +6,11 @@
       "iban": "ES21 2100 0418 4502 0005 1332",
       "balance": 2450.5,
       "lastTransaction": "03/02/2025"
+    },
+    {
+      "type": "2",
+      "name": "cuenta nueva",
+      "id": "NJdg0jNia_4"
     }
   ],
   "movements": [
@@ -27,5 +32,6 @@
       "transaction": "02/02/2025",
       "realTransaction": "02/02/2025"
     }
-  ]
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }
