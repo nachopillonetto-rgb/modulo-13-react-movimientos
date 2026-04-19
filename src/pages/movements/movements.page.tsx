@@ -1,8 +1,8 @@
 export const MovementsPage = () => {
   return (
-    <div style={{ padding: "24px", background: "white", color: "black" }}>
+    <div style={{ background: "white", padding: "24px", color: "black" }}>
       <h1>Movimientos OK</h1>
-      <p>Si ves esto, React y el router funcionan.</p>
+      <p>Si ves esto, React funciona.</p>
     </div>
   );
 };

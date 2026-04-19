@@ -56,10 +56,10 @@ export const AccountAddPage = () => {
   };
 
   return (
-    <div>
-      <h2>Agregar Cuenta</h2>
+    <div style={{ background: "white", padding: "24px" }}>
+      <h1 style={{ fontSize: "48px", marginBottom: "24px" }}>Agregar Cuenta</h1>
 
-      <div style={{ maxWidth: "400px", background: "white", padding: "16px", border: "1px solid #ddd" }}>
+      <div style={{ maxWidth: "400px" }}>
         <div style={{ marginBottom: "16px" }}>
           <label htmlFor="type">Tipo de cuenta</label>
           <select
@@ -99,5 +99,3 @@ export const AccountAddPage = () => {
     </div>
   );
 };
-EOFcat > .env <<'EOF'
-VITE_BASE_API_URL=http://localhost:3000
