@@ -1,13 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import Axios from "axios";
-
-interface Account {
-  type: string;
-  name: string;
-}
-
-const url = "http://localhost:3000/account-list";
+import { saveAccount } from "./account-add.api";
+import { Account } from "./account-add.api-model";
 
 export const AccountAddPage = () => {
   const navigate = useNavigate();
@@ -50,13 +44,11 @@ export const AccountAddPage = () => {
     return !newErrors.type && !newErrors.name;
   };
 
-  const handleSubmit = async (event?: React.FormEvent) => {
-    event?.preventDefault();
-
+  const handleSubmit = async () => {
     if (!validateForm()) return;
 
     try {
-      await Axios.post(url, account);
+      await saveAccount(account);
       navigate("/movements/1");
     } catch (error) {
       console.error("Error al guardar la cuenta:", error);
@@ -64,53 +56,35 @@ export const AccountAddPage = () => {
   };
 
   return (
-    <div style={{ padding: "24px" }}>
-      <h1>Agregar Cuenta</h1>
+    <div>
+      <h2>Agregar Cuenta</h2>
 
-      <form>
+      <div style={{ maxWidth: "400px", background: "white", padding: "16px", border: "1px solid #ddd" }}>
         <div style={{ marginBottom: "16px" }}>
-          <label
-            htmlFor="type"
-            style={{ display: "block", marginBottom: "8px" }}
-          >
-            Tipo de cuenta
-          </label>
-
+          <label htmlFor="type">Tipo de cuenta</label>
           <select
             id="type"
             value={account.type}
             onChange={handleChange("type")}
-            style={{ width: "100%", padding: "8px" }}
+            style={{ display: "block", width: "100%", marginTop: "8px" }}
           >
             <option value="">Seleccione una opción</option>
-            <option value="Cuenta Corriente">Cuenta corriente</option>
-            <option value="Cuenta Ahorro">Cuenta ahorro</option>
+            <option value="Cuenta corriente">Cuenta corriente</option>
+            <option value="Cuenta ahorro">Cuenta ahorro</option>
           </select>
-
-          {errors.type && (
-            <p style={{ color: "red", marginTop: "8px" }}>{errors.type}</p>
-          )}
+          {errors.type && <p style={{ color: "red" }}>{errors.type}</p>}
         </div>
 
         <div style={{ marginBottom: "16px" }}>
-          <label
-            htmlFor="name"
-            style={{ display: "block", marginBottom: "8px" }}
-          >
-            Alias
-          </label>
-
+          <label htmlFor="name">Alias</label>
           <input
             id="name"
             type="text"
             value={account.name}
             onChange={handleChange("name")}
-            style={{ width: "100%", padding: "8px" }}
+            style={{ display: "block", width: "100%", marginTop: "8px" }}
           />
-
-          {errors.name && (
-            <p style={{ color: "red", marginTop: "8px" }}>{errors.name}</p>
-          )}
+          {errors.name && <p style={{ color: "red" }}>{errors.name}</p>}
         </div>
 
         <div style={{ display: "flex", gap: "12px" }}>
@@ -121,7 +95,9 @@ export const AccountAddPage = () => {
             Cancelar
           </button>
         </div>
-      </form>
+      </div>
     </div>
   );
 };
+EOFcat > .env <<'EOF'
+VITE_BASE_API_URL=http://localhost:3000

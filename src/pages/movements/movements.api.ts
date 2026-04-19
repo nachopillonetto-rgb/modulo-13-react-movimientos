@@ -10,7 +10,7 @@ export const getAccount = async (id: string): Promise<AccountVm> => {
 
 export const getMovements = async (id: string): Promise<MovementVm[]> => {
   const response = await axios.get<MovementVm[]>(
-    `${baseUrl}/movements?accountId=${id}`
+    `${baseUrl}/movements?accountId=${Number(id)}`
   );
   return response.data;
 };

@@ -8,10 +8,10 @@ export interface AccountVm {
 
 export interface MovementVm {
   id: string;
-  accountId: string;
-  transaction: string;
-  realTransaction: string;
+  accountId: number;
   description: string;
   amount: number;
   balance: number;
+  transaction: string;
+  realTransaction: string;
 }

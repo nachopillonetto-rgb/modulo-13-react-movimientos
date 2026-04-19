@@ -7,7 +7,7 @@ function App() {
   return (
     <Routes>
       <Route element={<AppLayout />}>
-        <Route path="/" element={<Navigate to="/movements/1" />} />
+        <Route path="/" element={<Navigate to="/movements/1" replace />} />
         <Route path="/movements/:id" element={<MovementsPage />} />
         <Route path="/account-add" element={<AccountAddPage />} />
       </Route>

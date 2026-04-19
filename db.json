@@ -11,21 +11,21 @@
   "movements": [
     {
       "id": "1",
-      "accountId": "1",
-      "transaction": "01/02/2025",
-      "realTransaction": "01/02/2025",
+      "accountId": 1,
       "description": "Nómina",
-      "amount": 1200,
-      "balance": 2500
+      "amount": 2000,
+      "balance": 2450.5,
+      "transaction": "03/02/2025",
+      "realTransaction": "03/02/2025"
     },
     {
       "id": "2",
-      "accountId": "1",
-      "transaction": "03/02/2025",
-      "realTransaction": "03/02/2025",
+      "accountId": 1,
       "description": "Supermercado",
-      "amount": -49.5,
-      "balance": 2450.5
+      "amount": -50,
+      "balance": 2400.5,
+      "transaction": "02/02/2025",
+      "realTransaction": "02/02/2025"
     }
   ]
 }
