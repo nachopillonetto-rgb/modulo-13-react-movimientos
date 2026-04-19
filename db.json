@@ -1,0 +1,25 @@
+{
+  "account-list": [
+    {
+      "id": 1,
+      "type": "Cuenta corriente",
+      "name": "Mi cuenta prueba"
+    }
+  ],
+  "movements": [
+    {
+      "id": "1",
+      "fecha": "01/02/2025",
+      "concepto": "Nómina",
+      "importe": 1200,
+      "saldoDisponible": 2500
+    },
+    {
+      "id": "2",
+      "fecha": "03/02/2025",
+      "concepto": "Supermercado",
+      "importe": -45,
+      "saldoDisponible": 2455
+    }
+  ]
+}

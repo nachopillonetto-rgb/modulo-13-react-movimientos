@@ -1,5 +1,6 @@
 import { Routes, Route, Navigate } from "react-router-dom";
 import { MovementsPage } from "./pages/movements/movements.page";
+import { AccountAddPage } from "./pages/account-add/account-add.page";
 import { AppLayout } from "./layout/app.layout";
 
 function App() {
@@ -8,6 +9,7 @@ function App() {
       <Route element={<AppLayout />}>
         <Route path="/" element={<Navigate to="/movements/1" />} />
         <Route path="/movements/:id" element={<MovementsPage />} />
+        <Route path="/account-add" element={<AccountAddPage />} />
       </Route>
     </Routes>
   );
