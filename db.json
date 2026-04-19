@@ -1,25 +1,31 @@
 {
   "account-list": [
     {
-      "id": 1,
-      "type": "Cuenta corriente",
-      "name": "Mi cuenta prueba"
+      "id": "1",
+      "alias": "Cuenta principal",
+      "iban": "ES21 2100 0418 4502 0005 1332",
+      "balance": 2450.5,
+      "lastTransaction": "03/02/2025"
     }
   ],
   "movements": [
     {
       "id": "1",
-      "fecha": "01/02/2025",
-      "concepto": "Nómina",
-      "importe": 1200,
-      "saldoDisponible": 2500
+      "accountId": "1",
+      "transaction": "01/02/2025",
+      "realTransaction": "01/02/2025",
+      "description": "Nómina",
+      "amount": 1200,
+      "balance": 2500
     },
     {
       "id": "2",
-      "fecha": "03/02/2025",
-      "concepto": "Supermercado",
-      "importe": -45,
-      "saldoDisponible": 2455
+      "accountId": "1",
+      "transaction": "03/02/2025",
+      "realTransaction": "03/02/2025",
+      "description": "Supermercado",
+      "amount": -49.5,
+      "balance": 2450.5
     }
   ]
 }

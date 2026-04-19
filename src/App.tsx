@@ -1,7 +1,7 @@
 import { Routes, Route, Navigate } from "react-router-dom";
+import { AppLayout } from "./layout/app.layout";
 import { MovementsPage } from "./pages/movements/movements.page";
 import { AccountAddPage } from "./pages/account-add/account-add.page";
-import { AppLayout } from "./layout/app.layout";
 
 function App() {
   return (
